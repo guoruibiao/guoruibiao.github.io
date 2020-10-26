@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <meta name="keywords" content="泰戈尔✍️的地方">
+  <meta name="description" content="nil">
+  
+  <title>泰戈尔✍️的地方</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/materialize.min.css">
+    
+      <link rel="stylesheet" href="/css/main.min.css">
+    
+  
+  <style type="text/css">
+      html{
+          font-family: sans-serif;
+          font-weight: 300;
+      }
+      @font-face {
+          font-family: 'Material Icons';
+          font-style: normal;
+          font-weight: 400;
+          src: url(/fonts/MaterialIcons-Regular.eot);
+          src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+          url(/fonts/MaterialIcons-Regular.woff) format('woff'),
+          url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
+      }
+  </style>
+<link rel="shortcut icon" href="/source/favicon.ico">
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body>
+<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu" ><span class="nav-btn"></span></a></div>
+<div id="menu-outer">
+  <div id="menu-inner">
+      <ul id="slide-out" class="side-nav" >
+    <div class="nav-header"  style="background-image: url(/images/header-bg.png);background-color:#26A69A">
+    <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
+    <p>泰戈尔</p>
+    <div class="nav-link">
+        
+        
+        <a  href="http://github.com/guoruibiao" target="_blank"><div class="link-box github"></div></a>
+        
+        
+        <a href="mailto:1064319632@qq.com"><div class="link-box email"></div></a>
+        
+        
+        
+    </div>
+    <div class="nav-search">
+        <form id="search-form"> <!-- 搜索框相关 -->
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off"/>
+            <div class="nav-search-img"><i class="material-icons">search</i></div>
+        </form>
+        <div id="local-search-result"></div> <!-- 搜索结果区 -->
+        <p class='no-result'>无搜索结果</p>
+    </div>
+</div>
+    <!--Homepage-->
+
+<li class="nav-list">
+    <a href="/" target="_self">
+        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
+    </a>
+</li>
+
+<!--archives-->
+
+<li class="nav-list dropdown-btn">
+    <a  class=""  target="_self">
+        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        <a class="archive-link" href="/archives/2020/10/">October 2020<span class="archive-count">17</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/04/">April 2020<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/02/">February 2020<span class="archive-count">6</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/01/">January 2020<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2019/06/">June 2019<span class="archive-count">6</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2019/05/">May 2019<span class="archive-count">5</span></a>
+    </li>
+</ul>
+<!--categories-->
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        
+    </li>
+</ul>
+<!--tags-->
+
+<li class="nav-list">
+    <a href="/archives" target="_self">
+        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
+    </a>
+</li>
+
+<!--photo-->
+
+<li class="nav-list">
+    <a href="/photo" class="nopjax" target="_self">
+        <div class="nav-ico"><i class="material-icons">insert_photo</i> </div><p>影集</p>
+    </a>
+</li>
+
+<!--friends-->
+
+<!--about-->
+
+<li class="nav-list">
+    <a href="/about" target="_self">
+        <div class="nav-ico"><i class="material-icons">copyright</i> </div><p>关于</p>
+    </a>
+</li>
+
+
+</ul>
+
+  </div>
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
+    
+<article id="post">
+  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-15.png)" >
+  <h2>websocket-redis双工实时通信模型</h2>
+    
+  <p>作者:泰戈尔 &nbsp&nbsp 发布于:<time datetime="2020-10-26T06:13:18.753Z">
+          2020-10-26
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <p>最近在梳理一些知识点，已脱敏并去除公司实现，做一些自己理解上的实践。</p>
+<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><p>本次打算模拟下一个实时双工交互的业务实践，先来张图。</p>
+<p><img src="https://img-blog.csdnimg.cn/20190621114830822.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ndW9ydWliaWFvLmJsb2cuY3Nkbi5uZXQ=,size_16,color_FFFFFF,t_70" alt="模式结构图"></p>
+<p>可以看出，实时双工通信的基础在于<strong>Redis</strong>部分，核心就在于<strong>Pub/Sub</strong>模型，其余部分在此基础上丰富了交互内容。</p>
+<ul>
+<li><strong>Server</strong>端 ，用于模拟平时业务机器，对来自客户端的<strong>Request</strong>给予<strong>Response</strong>。</li>
+<li><strong>WebSocket Server</strong>端，比如直播业务中在直播间内聊天，肯定要用<strong>websocket</strong>来维系链接状态，这里可以做到语言无关，既可以用Java，也可以用golang。原理都是类似的。根据双工的特征，websocket服务器与客户端发生信息交互的场景无非主动和被动，场景如下：<ul>
+<li>主动触发， 指的是来自另一个客户端的action，触发了websocket服务器的push行为。</li>
+<li>被动触发，比如定时器触发，状态检查等行为，都属于被动触发</li>
+</ul>
+</li>
+<li><strong>APP</strong>端，一般团队都会以APP形式落地到终端用户，web网页也是类似。在直播场景中，主播、观众实际上可以统一虚化为<strong>客户端</strong>。</li>
+</ul>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>从图示上来看，每一个模块都不难，一点点去实现就好了。因为不想涉及公司业务上的东西，所以会有一些改动，如下：</p>
+<ul>
+<li><strong>APP</strong>端我这里会用JavaScript来作为客户端，简单模拟下就。</li>
+<li><strong>WebSocket</strong>服务器端，不打算用公司里Java版本，想试试golang版本。</li>
+<li><strong>Server</strong>端就用PHP简单模拟下。</li>
+</ul>
+<h3 id="websocket服务器端实现"><a href="#websocket服务器端实现" class="headerlink" title="websocket服务器端实现"></a>websocket服务器端实现</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// server.go</span></span><br><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;log&quot;</span></span><br><span class="line">	<span class="string">&quot;net/http&quot;</span></span><br><span class="line"></span><br><span class="line">	<span class="string">&quot;time&quot;</span></span><br><span class="line"></span><br><span class="line">	<span class="string">&quot;github.com/garyburd/redigo/redis&quot;</span></span><br><span class="line">	<span class="string">&quot;golang.org/x/net/websocket&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> clients <span class="keyword">map</span>[*websocket.Conn]<span class="keyword">string</span> = <span class="built_in">make</span>(<span class="keyword">map</span>[*websocket.Conn]<span class="keyword">string</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// websocket 服务器端测试</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Echo</span><span class="params">(ws *websocket.Conn)</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> err error</span><br><span class="line">	<span class="keyword">if</span> _, ok := clients[ws]; ok != <span class="literal">true</span> &#123;</span><br><span class="line">		clients[ws] = <span class="string">&quot;匿名&quot;</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		<span class="keyword">var</span> reply <span class="keyword">string</span></span><br><span class="line">		<span class="keyword">if</span> err = websocket.Message.Receive(ws, &amp;reply); err != <span class="literal">nil</span> &#123;</span><br><span class="line">			fmt.Println(<span class="string">&quot;Cannot receive&quot;</span>)</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125;</span><br><span class="line">		fmt.Println(<span class="string">&quot;Current client number: &quot;</span>, <span class="built_in">len</span>(clients))</span><br><span class="line">		fmt.Println(<span class="string">&quot;Received back from client: &quot;</span>, reply)</span><br><span class="line">		msg := <span class="string">&quot;RECEIVED: &quot;</span> + reply</span><br><span class="line">		fmt.Println(<span class="string">&quot;Sending to client: &quot;</span> + msg)</span><br><span class="line">		<span class="keyword">for</span> client, _ := <span class="keyword">range</span> clients &#123;</span><br><span class="line">			fmt.Println(client)</span><br><span class="line">			<span class="keyword">if</span> err = websocket.Message.Send(client, msg); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				fmt.Println(<span class="string">&quot;Sending failed&quot;</span>)</span><br><span class="line">				<span class="keyword">break</span></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">tick</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		time.Sleep(time.Second * <span class="number">10</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;checking ping&quot;</span>)</span><br><span class="line">		<span class="keyword">for</span> key, _ := <span class="keyword">range</span> clients &#123;</span><br><span class="line">			<span class="keyword">if</span> key.IsClientConn() == <span class="literal">false</span> &#123;</span><br><span class="line">				<span class="comment">// delete(clients, key)</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 对所有客户端进行订阅消息的推送</span></span><br><span class="line">		consume(clients)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">consume</span><span class="params">(clients <span class="keyword">map</span>[*websocket.Conn]<span class="keyword">string</span>)</span></span> &#123;</span><br><span class="line">	client, err := redis.Dial(<span class="string">&quot;tcp&quot;</span>, <span class="string">&quot;localhost:6379&quot;</span>)</span><br><span class="line">	<span class="keyword">defer</span> client.Close()</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(err)</span><br><span class="line">	&#125;</span><br><span class="line">	psc := redis.PubSubConn&#123;Conn: client&#125;</span><br><span class="line">	psc.Subscribe(<span class="string">&quot;channel&quot;</span>)</span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		<span class="keyword">switch</span> v := psc.Receive().(<span class="keyword">type</span>) &#123;</span><br><span class="line">		<span class="keyword">case</span> redis.Message:</span><br><span class="line">			fmt.Printf(<span class="string">&quot;%s: message: %s\n&quot;</span>, v.Channel, v.Data)</span><br><span class="line">			<span class="keyword">for</span> client, _ := <span class="keyword">range</span> clients &#123;</span><br><span class="line">				fmt.Println(client)</span><br><span class="line">				<span class="keyword">if</span> err = websocket.Message.Send(client, <span class="keyword">string</span>(v.Data)); err != <span class="literal">nil</span> &#123;</span><br><span class="line">					fmt.Println(<span class="string">&quot;Sending failed&quot;</span>)</span><br><span class="line">					<span class="keyword">break</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		<span class="keyword">case</span> redis.Subscription:</span><br><span class="line">			fmt.Printf(<span class="string">&quot;%s: %s %d\n&quot;</span>, v.Channel, v.Kind, v.Count)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	http.Handle(<span class="string">&quot;/&quot;</span>, websocket.Handler(Echo))</span><br><span class="line">	<span class="keyword">go</span> tick()</span><br><span class="line">	<span class="keyword">if</span> err := http.ListenAndServe(<span class="string">&quot;:1234&quot;</span>, <span class="literal">nil</span>); err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Fatal(<span class="string">&quot;ListenAndServe failed: &quot;</span>, err)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="app端实现"><a href="#app端实现" class="headerlink" title="app端实现"></a>app端实现</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// client.js</span></span><br><span class="line"><span class="keyword">var</span> wsServer = <span class="string">&#x27;ws://localhost:1234&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> websocket = <span class="keyword">new</span> WebSocket(wsServer);</span><br><span class="line">websocket.onopen = <span class="function"><span class="keyword">function</span> (<span class="params">evt</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;Connected to WebSocket server.&quot;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">websocket.onclose = <span class="function"><span class="keyword">function</span> (<span class="params">evt</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;Disconnected&quot;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">websocket.onmessage = <span class="function"><span class="keyword">function</span> (<span class="params">evt</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;Retrieved data from server: &#x27;</span> + evt.data);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">websocket.onerror = <span class="function"><span class="keyword">function</span> (<span class="params">evt, e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;Error occured: &#x27;</span> + evt.data);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 发送消息</span></span><br><span class="line">websocket.send(<span class="string">&quot;hello world!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="server端实现"><a href="#server端实现" class="headerlink" title="server端实现"></a>server端实现</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line">$redis = <span class="keyword">new</span> Redis();</span><br><span class="line">$redis-&gt;pconnect(<span class="string">&quot;localhost&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">$ret = $redis-&gt;publish(<span class="string">&quot;channel&quot;</span>, <span class="string">&quot;data from PHP&quot;</span>);</span><br><span class="line">var_dump($ret);</span><br></pre></td></tr></table></figure>
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>按照图例，打算对主动触发和被动触发进行下测试。</p>
+<h3 id="主动触发"><a href="#主动触发" class="headerlink" title="主动触发"></a>主动触发</h3><p>主动触发其实就是对websocket基本功能的测试，一般都是开俩客户端，一段发消息，看看另一端是否能收到就可以了，流程是</p>
+<p>1.启动websocket服务器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">→ go run server.go</span><br></pre></td></tr></table></figure>
+<p>2.客户端连接websocket服务器</p>
+<pre><code>Chrome 打开调试器console输入上面的JavaScript代码即可。</code></pre>
+<p>3.交互测试<br><img src="https://img-blog.csdnimg.cn/20190621114132237.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ndW9ydWliaWFvLmJsb2cuY3Nkbi5uZXQ=,size_16,color_FFFFFF,t_70" alt="主动触发测试"></p>
+<h3 id="被动触发"><a href="#被动触发" class="headerlink" title="被动触发"></a>被动触发</h3><p>被动触发一般都是定时任务，如定时器timer来触发的。在上面<strong>golang</strong>代码中，有这么一段调用。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">go</span> tick()</span><br><span class="line"><span class="comment">// 内部调用了consume方法，来实现对subscribe消息的消费</span></span><br></pre></td></tr></table></figure>
+
+<p>1.启动websocket服务器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">➜ go run server.go</span><br><span class="line">checking ping</span><br></pre></td></tr></table></figure>
+<p>2.客户端js链接websocket服务器<br><img src="https://img-blog.csdnimg.cn/20190621113701297.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ndW9ydWliaWFvLmJsb2cuY3Nkbi5uZXQ=,size_16,color_FFFFFF,t_70" alt="javascripe链接websocket服务器"><br>3.PHP去publish消息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">➜ php publish.php</span><br><span class="line">int(1)</span><br></pre></td></tr></table></figure>
+<p>4.查看客户端是否可以收到websocket消费到的数据<br><img src="https://img-blog.csdnimg.cn/20190621113837862.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ndW9ydWliaWFvLmJsb2cuY3Nkbi5uZXQ=,size_16,color_FFFFFF,t_70" alt="查看客户端的确收到了对应publish的消息"></p>
+<h2 id="整理"><a href="#整理" class="headerlink" title="整理"></a>整理</h2><p>至此，基本上双工实时通信的demo就结束了。相比于公司Java实现的版本，大体框架是类似的，无非是有没有业务的支撑。</p>
+
+  </div>
+  <!--评论块-->
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
+  <a href="/2020/10/26/《Elon·Musk硅谷钢铁侠》/" id="post_nav-newer" class="post-nav-content prev-content">
+      新篇
+  </a>
+    
+
+
+  <!-- Next Nav -->
+    
+  <a href="/2020/10/26/Sophie-Marceau/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
+</nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%BB%93%E6%9E%84"><span class="post-toc-number">1.</span> <span class="post-toc-text">结构</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="post-toc-number">2.</span> <span class="post-toc-text">实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#websocket%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%AE%9E%E7%8E%B0"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">websocket服务器端实现</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#app%E7%AB%AF%E5%AE%9E%E7%8E%B0"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">app端实现</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#server%E7%AB%AF%E5%AE%9E%E7%8E%B0"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">server端实现</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="post-toc-number">3.</span> <span class="post-toc-text">测试</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%BB%E5%8A%A8%E8%A7%A6%E5%8F%91"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">主动触发</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%A2%AB%E5%8A%A8%E8%A7%A6%E5%8F%91"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">被动触发</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%95%B4%E7%90%86"><span class="post-toc-number">4.</span> <span class="post-toc-text">整理</span></a></li></ol>
+</div>
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
+  </div>
+</div>
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a  id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
+
+
+<p style="line-height: 45px">Copyright ©  2017  泰戈尔✍️的地方</p>
+<p style="line-height: 45px">Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> && Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
+
+  </div>
+</div>
+
+<!--影集界面需要的资源-->
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/materialize.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+
+<script>
+    NProgress.start();
+    NProgress.done();
+    lazy();
+    links();
+    window.onpopstate = menu();
+    //pjax操作
+    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
+    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
+        .on('pjax:end', () => {
+            dowmdiv();
+            lazy();
+            toc();
+            links();
+            menu();
+        });
+</script>
+
+</body>
+</html>

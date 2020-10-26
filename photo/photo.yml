@@ -1,0 +1,17 @@
+snowing-playground:
+    large_link: /photo/WechatIMG445.jpeg
+    small_link: /photo/WechatIMG445.jpeg
+    very_small_link: /photo/WechatIMG445.jpeg
+    alt: "image 1"
+
+福:
+    large_link: /photo/WechatIMG451.jpeg
+    small_link: /photo/WechatIMG451.jpeg
+    very_small_link: /photo/WechatIMG451.jpeg
+    alt: "image 3"    
+
+西二旗:
+    large_link: /photo/image-20201025120953626.png
+    small_link: /photo/image-20201025120953626.png
+    very_small_link: /photo/image-20201025120953626.png
+    alt: "鹏寰->西二旗"
